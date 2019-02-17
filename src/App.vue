@@ -86,15 +86,6 @@ export default {
     }
   },
 
-  mounted() {
-    this.$store.subscribe((mutation, state) => {
-      if(state.todos.length >= 3)
-        this.disableInput = true;
-      else
-      this.disableInput = false;
-    });
-  },
-
   directives: {
     "todo-focus": function(el, binding) {
       if (binding.value) {
